@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fbf3df;
+    width: 100%;
+}
+.parentContainer {
+    margin: 50px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around
+}
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container h2 {
+     font-family: "Outfit", sans-serif;
+     font-weight: bold;
+     font-size: 2rem;
+}
+.container p {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+}
+.formContainer {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 0px grey;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.formContainer label {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(109, 109, 109);
+    text-transform: uppercase;
+}
+.formContainer input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 211, 211);
+    padding: 0px 15px;
+    outline: none;
+}
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+}
+.text-priority {
+    font-size: 13px;
+    text-transform: capitalize;
+}
+.btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.btn-container button {
+    background-color: #E85D3A;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 15px;
+    color: white;
+    font-weight: bold;
+}
+.category {
+    margin: 10px 0px;
+}
+.eachCategory {
+    margin: 0px 10px;
+}
+.work {
+    background-color: rgba(255, 0, 0, 0.15);
+    color: red;
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgb(255, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.personal {
+    background-color: purple;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.health {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.15);
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgb(0, 128, 0);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.learning {
+    color: orange;
+    background-color: rgba(255, 166, 0, 0.15);
+    padding: 8px 15px;
+    border-radius: 30px;
+    border: 1px solid rgb(255, 166, 0);
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+}
+.error-message {
+    color: red;
+    font-family: "Inter", sans-serif;
+}
+.date {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: rgb(109, 109, 109);
+}
+.todo input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    accent-color: #75cfa5;
+    cursor: pointer;
+}
+
+.todo button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+.todo .text.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo .text {
+    /* background-color: #c0c0be9c; */
+    width: 80%;
+    height: 100%;
+    padding: 5px;
+    text-transform:capitalize ;
+    border-radius: 10px;
+}
+.todo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+.todo .text.completed {
+    text-decoration: line-through;
+    color: grey;
+    background-color: hwb(43 87% 2%);;
+}
+
+@media (max-width: 768px) {
+  .parentContainer {
+    margin: 32px 0;
+    padding: 0 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .formContainer,
+  .todo {
+    width: 100%;
+  }
+
+  .formContainer {
+    padding: 24px;
+  }
+
+  .todo {
+    flex-wrap: wrap;
+  }
+
+  .todo .text {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 600px) {
+  .parentContainer {
+    margin: 24px 0;
+    padding: 0 16px;
+  }
+
+  .container {
+    gap: 12px;
+  }
+
+  .container h2 {
+    font-size: 1.75rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .formContainer {
+    padding: 20px 16px;
+  }
+
+  .btn-container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .category {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .eachCategory {
+    margin: 0;
+  }
+
+  .btn-container > div:last-child {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .todo {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .todo .text {
+    width: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .parentContainer {
+    padding: 0 12px;
+  }
+
+  .formContainer {
+    padding: 16px 12px;
+  }
+
+  .eachCategory {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .btn-container button {
+    padding: 9px 13px;
+  }
+}
